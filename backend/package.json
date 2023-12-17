@@ -5,7 +5,8 @@
   "main": "serverless.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:api": "serverless offline"
+    "start:api": "serverless offline",
+    "deploy:dev": "serverless deploy --aws-profile default"
   },
   "engines": {
     "node": ">=14.15.0"
