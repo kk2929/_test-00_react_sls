@@ -1,14 +1,18 @@
-import type { ValidatedEventAPIGatewayProxyEvent } from '@libs/api-gateway';
-import { formatJSONResponse } from '@libs/api-gateway';
-import { middyfy } from '@libs/lambda';
+import type { ValidatedEventAPIGatewayProxyEvent } from "@libs/api-gateway";
+import { formatJSONResponse } from "@libs/api-gateway";
+import { middyfy } from "@libs/lambda";
 
-import schema from './schema';
+import schema from "./schema";
 
-const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
-  return formatJSONResponse({
-    message: `Hello ${event.body.name}, welcome to the exciting Serverless world!`,
+const handler: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (
+  event
+) => {
+  const res = {
+    message: `Hello ${event.body.name}!, fghfghfhgt`,
     event,
-  });
+  };
+  return formatJSONResponse(res);
 };
 
-export const main = middyfy(hello);
+// export const main = middyfy(handler, schema);
+export const main = middyfy(handler);
