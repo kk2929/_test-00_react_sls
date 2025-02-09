@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:api": "serverless offline",
-    "deploy:dev": "serverless deploy --aws-profile default"
+    "deploy:dev": "serverless deploy --aws-profile default",
+    "generate:openapi:models": "./scripts/generate-openapi-models.sh",
+    "generate:openapi:code": "openapi-generator-cli generate -g typescript-axios -i ./openapi/defs/index.yml -o ./src/openapi/generated"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -16,10 +18,13 @@
     "@middy/http-json-body-parser": "^3.4.0"
   },
   "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.7.0",
     "@serverless/typescript": "^3.0.0",
     "@types/aws-lambda": "^8.10.71",
     "@types/node": "^14.14.25",
     "esbuild": "^0.14.11",
+    "json-merger": "^3.0.0",
+    "json-refs": "^3.0.15",
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
     "serverless-esbuild": "^1.23.3",
