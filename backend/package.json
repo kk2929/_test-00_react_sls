@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@middy/core": "^3.4.0",
-    "@middy/http-json-body-parser": "^3.4.0"
+    "@middy/http-json-body-parser": "^3.4.0",
+    "inversify": "^6.2.2"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.7.0",
