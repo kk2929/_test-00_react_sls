@@ -1,4 +1,4 @@
-import models from "@openapi/generated/models";
+import models from "@/openapi/generated/models";
 
 export default models.Hello;
 

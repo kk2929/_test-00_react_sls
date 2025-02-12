@@ -8,7 +8,16 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "ES2020",
-    "outDir": "lib"
+    "outDir": "lib",
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    // "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": true,
+    "noUncheckedIndexedAccess": true
   },
   "include": ["src/**/*.ts", "serverless.ts"],
   "exclude": [
