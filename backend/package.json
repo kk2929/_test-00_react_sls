@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:api": "serverless offline",
     "deploy:dev": "serverless deploy --aws-profile default",
+    "generate:openapi": "yarn generate:openapi:models ; yarn generate:openapi:code",
     "generate:openapi:models": "./scripts/generate-openapi-models.sh",
     "generate:openapi:code": "openapi-generator-cli generate -g typescript-axios -i ./openapi/defs/index.yml -o ./src/openapi/generated"
   },

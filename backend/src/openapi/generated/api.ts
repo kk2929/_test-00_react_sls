@@ -34,7 +34,7 @@ export interface Hello {
      * @type {string}
      * @memberof Hello
      */
-    'name'?: string;
+    'name': string;
 }
 /**
  * 

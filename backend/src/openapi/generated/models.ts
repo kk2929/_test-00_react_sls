@@ -5,6 +5,9 @@ export default {
 			"name": {
 				"type": "string"
 			}
-		}
+		},
+		"required": [
+			"name"
+		]
 	}
 } as const;

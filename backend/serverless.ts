@@ -1,7 +1,7 @@
 import type { AWS } from '@serverless/typescript';
 
 // import hello from '@functions/hello';
-import {hello} from '@functions';
+import {hello} from '@/functions';
 
 const serverlessConfiguration: AWS = {
   service: 'backend',
