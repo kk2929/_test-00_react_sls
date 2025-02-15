@@ -2,7 +2,7 @@ import "reflect-metadata"; // required by inversify
 import { Container, injectable } from "inversify";
 import { TYPES } from "@/config/dependency/types";
 import { Hello } from "./usecase";
-import type { IHelloDepend } from "@/types/interface";
+import type { IHelloDepend } from "@/types/interface.d";
 
 const container = new Container({ defaultScope: "Singleton" });
 

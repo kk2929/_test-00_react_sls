@@ -1,6 +1,6 @@
 import { inject, injectable } from "inversify";
 import { TYPES } from "@/config/dependency/types";
-import type { IHelloDepend } from "@/types/interface";
+import type { IHelloDepend } from "@/types/interface.d";
 
 @injectable()
 export class Hello {
