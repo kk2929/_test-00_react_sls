@@ -17,9 +17,12 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "noErrorTruncation": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    // "types": ["jest", "node"],
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts", "serverless.ts"],
+  // https://zenn.dev/yu46/articles/083ea1911d1e62#%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95
+  "include": ["src/**/*.ts", "serverless.ts", "*.ts", "tests/**/*.spec.ts"],
   "exclude": [
     "node_modules/**/*",
     ".serverless/**/*",
